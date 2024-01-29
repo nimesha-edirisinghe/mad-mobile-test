@@ -1,14 +1,11 @@
-import { lazy, Suspense } from 'react';
 import { UserService } from './services/userService';
-const Home = lazy(() => import('./pages/Home/Home'));
+import Home from './pages/Home/Home';
 
 function App() {
   const userService = new UserService();
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Home userService={userService} />
-      </Suspense>
+      <Home userService={userService} />
     </>
   );
 }

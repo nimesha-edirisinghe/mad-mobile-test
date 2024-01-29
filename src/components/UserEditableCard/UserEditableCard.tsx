@@ -1,11 +1,11 @@
 import { FC, useState } from 'react';
 import './_UserEditableCard.scss';
-import { FormDataI, ResultDataI } from '../../types/response/user';
+import { FormDataI, UserDataI } from '../../types/response/user';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
 
 interface Props {
-  userData: Partial<ResultDataI>;
+  userData: Partial<UserDataI>;
   onSaveHandler: (formData: FormDataI) => void;
   onCancelHandler: () => void;
 }

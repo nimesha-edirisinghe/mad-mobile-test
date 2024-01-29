@@ -19,19 +19,19 @@ const Home: FC<Props> = ({ userService }) => {
   const [editModeCard, setEditModeCard] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        await userService.getUser();
-        const userData = userService.getUserResponse();
-        setUserList(userData);
-      } catch (error) {
-        console.error('Error fetching user:', error);
-      }
-    };
-
     fetchUserData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const fetchUserData = async () => {
+    try {
+      await userService.getUser();
+      const userData = userService.getUserResponse();
+      setUserList(userData);
+    } catch (error) {
+      console.error('Error fetching user:', error);
+    }
+  };
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const onSaveHandler = (formData: FormDataI) => {

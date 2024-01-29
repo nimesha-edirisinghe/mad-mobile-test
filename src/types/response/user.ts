@@ -1,4 +1,4 @@
-export interface ResultDataI {
+export interface UserDataI {
   gender: string;
   name: {
     title: string;
@@ -63,7 +63,7 @@ export interface InfoI {
 }
 
 export interface UserResponseI {
-  results: ResultDataI[] | undefined;
+  results: UserDataI[] | undefined;
   info?: InfoI | null | undefined;
 }
 

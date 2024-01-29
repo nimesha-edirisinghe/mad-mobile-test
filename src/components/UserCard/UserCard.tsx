@@ -1,9 +1,10 @@
 import { FC } from 'react';
 import './_UserCard.scss';
-import { ResultDataI } from '../../types/response/user';
+import { UserDataI } from '../../types/response/user';
+import { FaUserEdit } from 'react-icons/fa';
 
 interface UserCardProps {
-  userData: Partial<ResultDataI>;
+  userData: Partial<UserDataI>;
   onEditHandler: (key: string) => void;
 }
 
@@ -17,7 +18,9 @@ const UserCard: FC<UserCardProps> = ({ userData, onEditHandler }) => {
   return (
     <main className="user-card-container">
       <section className="card-header-section">
-        <div className="edit-icon " onClick={() => onEditHandler(email!)}></div>
+        <div className="edit-icon " onClick={() => onEditHandler(email!)}>
+          <FaUserEdit size="25px" />
+        </div>
         <p className="username">{userName}</p>
       </section>
       <section className="profile-picture-section">
