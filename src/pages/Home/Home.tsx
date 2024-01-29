@@ -54,7 +54,6 @@ const Home: FC<Props> = ({ userService }) => {
 
   useEffect(() => {
     const userData = userService.getUserResponse();
-    console.log('user List 2 : ', userData);
     setUserList(userData);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [editModeCard]);
