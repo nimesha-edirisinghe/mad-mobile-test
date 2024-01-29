@@ -1,0 +1,12 @@
+.header-container {
+  height: 100px;
+  width: 100%;
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .input-container {
+    margin-right: 5px;
+  }
+}
